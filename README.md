@@ -29,4 +29,4 @@ Example:
 - ```Ctrl+C``` on the terminal will gracefully shut down the application.
 
 ## Access
-To access the application, open the link 'http://localhost:8081/feedback' into the browser.
+To access the application, open the link 'http://localhost:8081/feedback'.
