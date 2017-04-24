@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/feedback.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div id="site-header">
+        <div th:replace="fragments/header :: header">...</div>
+    </div>
+    <div id="feedback-panel">
+        <div class="col-md-6 col-md-offset-3">
+            <form autocomplete="off" action="#" th:action="@{/feedback}"
+                  th:object="${feedback}" method="post" class="form-horizontal"
+                  role="form">
+                <h2 class="font-primary">Feedback Form</h2>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('product')}" th:errors="*{product}"
+                               class="validation-message"></label>
+                        <select required class="form-control" th:field="*{product.id}" id="ddlProductList">
+                            <option value="" >Select product...</option>
+                            <option th:each="product : ${productList}" th:value="${product.id}" th:text="${product.name}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('customer.firstName')}" th:errors="*{customer.firstName}"
+                               class="validation-message"></label>
+                        <input type="text" required th:field="*{customer.firstName}" placeholder="Name"
+                               class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label	th:if="${#fields.hasErrors('customer.lastName')}" th:errors="*{customer.lastName}"
+                                  class="validation-message"></label>
+                        <input type="text" th:field="*{customer.lastName}"
+                               placeholder="Last Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="email" required th:field="*{customer.email}" placeholder="Email"
+                               class="form-control" /><label
+                            th:if="${#fields.hasErrors('customer.email')}" th:errors="*{customer.email}"
+                            class="validation-message"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="text" th:field="*{customer.phone}" placeholder="Phone"
+                               class="form-control" /><label
+                            th:if="${#fields.hasErrors('customer.phone')}" th:errors="*{customer.phone}"
+                            class="validation-message"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <textarea required rows="4" cols="50" required th:field="*{description}" placeholder="Feedback"
+                                  class="form-control" /><label
+                            th:if="${#fields.hasErrors('description')}" th:errors="*{description}"
+                            class="validation-message"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <button type="submit" class="btn btn-send btn-block">Send Feedback</button>
+                    </div>
+                </div>
+
+                <span th:utext="${successMessage}"></span>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div id="site-footer">
+    <div th:replace="fragments/footer :: footer">...</div>
+</div>
+</body>
+</html>
