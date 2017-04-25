@@ -67,15 +67,4 @@ public class FeedbackController {
         modelAndView.setViewName("feedback");
         return modelAndView;
     }
-
-    @RequestMapping(value="/feedbackList", method = RequestMethod.GET)
-    public ModelAndView getFeedbacks(){
-
-        ModelAndView modelAndView = new ModelAndView();
-
-        modelAndView.addObject("feedbackList", feedbackService.getFeedbacks());
-        modelAndView.setViewName("feedbackList");
-
-        return modelAndView;
-    }
 }

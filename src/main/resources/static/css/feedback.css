@@ -1,27 +1,12 @@
-/* Header Styles */
-#site-header, #site-footer {
-    width:100%;
-    height:80px;
-    padding-top:10px;
-    padding-bottom:10px;
-    max-width: 1320px;
-    margin: 0 auto;
-}
-
 .liverton.logo {
     float: left;
-    padding-top: 17px;
+    padding-top: 10px;
 }
 
-/* Footer Styles */
-#site-footer {width:100%;height:80px;padding:15px 30px;background-color:white;font-size:12px;}
-#site-footer .left-sec {float:left;color:#6d6d6d;font-weight:normal;margin:16px 0;}
-#site-footer .left-sec a {font-weight:bold;color:#6d6d6d;}
-#site-footer .left-sec a.active {color:#5f3889;}
-#site-footer .right-sec {float:right;}
-#site-footer .right-sec .logo {float:right;margin-left:20px;}
-#site-footer .right-sec .links {float:right;margin:16px 0;}
-#site-footer .right-sec .links a {font-weight:bold;color:#6d6d6d;}
+.navbar-default {
+    background-color: #f5f5f5 !important;
+    border-color: #E7E7E7;
+}
 
 /* Feedback Panel */
 #feedback-panel {width:100%;height:110px;background-color:white;}
@@ -42,31 +27,8 @@
 .btn-send {
     color: #fff;
     background-color: #1abc9c;
-    border-width: 2px;
-    border-color: #1abc9c;
-}
-
-/* General Styles */
-html {box-sizing: border-box;}
-*, *:before, *:after {box-sizing: inherit;}
-
-a {text-decoration:none;}
-
-/* hover effect */
-a,
-#main-nav ul li a,
-.col-3 .col,
-.button {
-    opacity: 1;
-    transition: all 0.3s ease 0s;
-}
-
-#main-nav ul li a:hover,
-.col-3 .col:hover,
-a:hover,
-.button:hover {
-    opacity: 0.5;
-    text-decoration: none;
+    border: 2px #1abc9c;
+    max-width: 200px;
 }
 
 .col-3 .col a:hover {
@@ -75,42 +37,21 @@ a:hover,
 
 .inner {width:100%;max-width:956px;margin:0 auto;height:100%;}
 
-
-#main-nav {font-size:14px;letter-spacing:-0.4px;line-height:20px;height:20px;float:left;margin:13px 30px;}
-#main-nav ul {list-style: none;padding:0;margin:0;}
-#main-nav ul li {float: left;margin:0 18px;}
-#main-nav ul li a { color:#6d6d6d; }
-
-/* Footer Styles */
-#site-footer {width:100%;height:80px;padding:15px 30px;background-color:white;font-size:12px;}
-#site-footer .left-sec {float:left;color:#6d6d6d;font-weight:normal;margin:16px 0;}
-#site-footer .left-sec a {font-weight:bold;color:#6d6d6d;}
-#site-footer .left-sec a.active {color:#5f3889;}
-#site-footer .right-sec {float:right;}
-#site-footer .right-sec .logo {float:right;margin-left:20px;}
-#site-footer .right-sec .links {float:right;margin:16px 0;}
-#site-footer .right-sec .links a {font-weight:bold;color:#6d6d6d;}
-
 /* Hero Banner */
 #hero-banner {width:100%;height:auto;position:relative;}
 #hero-banner .content {width:100%;position:absolute;top:50%;left:0;transform:translateY(-50%);}
-#hero-banner .content h1 {font-size: 72px;font-weight:bold;display:block;margin-bottom:10px;}
-#hero-banner .content h1 span {color:#f5f5f5;background-color:#00b0f0;padding-left:10px;padding-right:10px;}
-#hero-banner .content h2 {font-size: 42px;font-weight:bold;display:block;}
-#hero-banner .content h2 span {color:#00b0f0;background-color:#f5f5f5;padding-left:10px;padding-right:10px;}
 #hero-banner .content p {max-width:466px;font-size:16px;line-height:1.5;color:white;display:block;}
-#hero-banner .content .button {background:#0096e6;border:none;font-size:16px;font-weight:normal;padding:20px 60px;color:white;display:inline-block;}
 
-/* Home Features */
-.features {width:100%;height:380px;padding:50px 0;background-color:#ebebeb;}
-.col-3 {width:100%;max-width:975px;}
-.col-3 .col {
-    width:305px;
-    margin:0 10px;
-    float:left;
+footer {
+    background-color: #f5f5f5 !important;
+    text-align:center;
+    padding:20px;
+    position: relative;
+    height: 60px;
+    max-width: 1140px;
+    width: 100%;
 }
 
-.features .col .img {width:100%;height:140px;}
-.features .col .txt {width:100%;height:140px;font-size:22px;font-weight:bold;color:#5f259f;line-height:30px;padding:25px 30px;background-color:white;position:relative;display:block;}
-.features .col .txt span {width:100px;height:4px;background-color:#5f259f;position:absolute;bottom:30px;left:30px;}
-
+.footer, .push {
+    height: 155px; /* .push must be the same height as .footer */
+}

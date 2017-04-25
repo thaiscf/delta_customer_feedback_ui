@@ -6,20 +6,72 @@
 </head>
 <body>
 <div th:fragment="header">
-    <header id="site-header">
-        <a href="#" class="liverton logo">
-            <img src="/images/logo.png"/>
-        </a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="/images/logo.png"/></a>
+            </div>
 
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#" th:href="@{/feedback.html}">FEEDBACK</a></li>
-                <li><a href="#" th:href="@{/feedbackList.html}">FEEDBACK LIST</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">MENU 4</a></li>
-                <li><a href="#">MENU 5</a></li>
-            </ul>
-        </nav>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" th:href="@{/feedback}">FEEDBACK <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#" th:href="@{/feedbackList}">FEEDBACK LIST</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">prod 1</a></li>
+                            <li><a href="#">prod 2</a></li>
+                            <li><a href="#">prod 3</a></li>
+                            <li><a href="#">prod 4</a></li>
+                            <li><a href="#">prod 5</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Login</a></li>
+                </ul>
+<!--                <ul class="nav navbar-nav navbar-right">
+                    <li th:if="${#authorization.expression('!isAuthenticated()')}">
+                        <a href="/signin" th:href="@{/signin}">Sign in</a>
+                    </li>
+                    <li th:if="${#authorization.expression('isAuthenticated()')}">
+                        <a href="/logout" th:href="@{/logout}">Logout</a>
+                    </li>
+                </ul>-->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!--<header id="site-header">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand liverton logo" href="#"><img src="/images/logo.png"/></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" th:href="@{/feedback.html}">FEEDBACK</a></li>
+                        <li><a href="#" th:href="@{/feedbackList.html}">FEEDBACK LIST</a></li>
+                        <li><a href="#">PRODUCTS</a></li>
+                        <li><a href="#">MENU 4</a></li>
+                        <li><a href="#">MENU 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        &lt;!&ndash;<div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                </ul>
+        </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -27,9 +79,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" th:href="@{/feedbackList.html}">Login</a></li>
             </ul>
-        </div>
+        </div>&ndash;&gt;
 
-    </header>
+    </header>-->
 </div>
 </body>
 </html>

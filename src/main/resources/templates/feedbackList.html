@@ -15,30 +15,23 @@
     </div>
     <div id="feedback-panel">
         <div class="col-md-6 col-md-offset-3">
-            <form autocomplete="off" action="#" th:action="@{/feedbackList}"
-                 method="get" class="form-horizontal" role="form">
 
-                <h2 class="font-primary">List of Feedbacks</h2>
+            <h2 class="font-primary">List of Feedbacks</h2>
 
-                    <table class="table table-striped">
-                        <tr>
-                            <th>Customer</th>
-                            <th>Product</th>
-                            <th>Sent to</th>
-                            <th>Description</th>
-                        </tr>
-                        <tr th:each="feedback : ${feedbackList}">
-                            <td th:text="${feedback.customer.fullName}"></td>
-                            <td th:text="${feedback.product.name}"></td>
-                            <td th:text="${feedback.sentTo}"></td>
-                            <td th:text="${feedback.description}"></td>
-                        </tr>
-                    </table>
-
-                <span th:utext="${successMessage}"></span>
-
-
-            </form>
+            <table class="table table-striped">
+                <tr>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>Sent to</th>
+                    <th>Description</th>
+                </tr>
+                <tr th:each="feedback : ${feedbacks}">
+                    <td th:text="${feedback.customer.fullName}"></td>
+                    <td th:text="${feedback.product.name}"></td>
+                    <td th:text="${feedback.sentTo}"></td>
+                    <td th:text="${feedback.description}"></td>
+                </tr>
+            </table>
         </div>
     </div>
 
