@@ -8,4 +8,7 @@ public class EmailConfig {
 
     @Value(value = "${api.email.recipient}")
     public String emailRecipient;
+
+    @Value(value = "${api.email.subject}")
+    public String emailSubject;
 }

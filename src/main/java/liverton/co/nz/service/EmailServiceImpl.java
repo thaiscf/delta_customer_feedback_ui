@@ -14,13 +14,13 @@ public class EmailServiceImpl implements EmailService {
     private JavaMailSender mailSender;
 
     @Override
-    public void send(String message, String sender, String recipient) {
+    public void send(String subject, String message, String sender, String recipient) {
 
         MimeMessagePreparator messagePreparator = mimeMessage -> {
             MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
             messageHelper.setFrom(sender);
             messageHelper.setTo(recipient);
-            messageHelper.setSubject("Feedback");
+            messageHelper.setSubject(subject);
             messageHelper.setText(message);
         };
 

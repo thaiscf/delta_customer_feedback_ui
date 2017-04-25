@@ -52,7 +52,7 @@ public class FeedbackController {
             try {
 
                 feedback.setSentTo(emailConfig.emailRecipient);
-                emailService.send(feedback.toString(), feedback.getCustomer().getEmail(), feedback.getSentTo());
+                emailService.send(emailConfig.emailSubject, feedback.toString(), feedback.getCustomer().getEmail(), feedback.getSentTo());
                 feedbackService.sendFeedback(feedback);
 
                 modelAndView.addObject("successMessage", "Thanks for your feedback!");
