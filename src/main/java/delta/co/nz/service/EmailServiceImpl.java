@@ -1,4 +1,4 @@
-package liverton.co.nz.service;
+package delta.co.nz.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;

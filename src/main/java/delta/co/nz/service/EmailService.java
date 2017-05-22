@@ -1,4 +1,4 @@
-package liverton.co.nz.service;
+package delta.co.nz.service;
 
 public interface EmailService {
 

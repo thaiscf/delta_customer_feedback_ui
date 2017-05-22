@@ -1,6 +1,6 @@
-package liverton.co.nz.service;
+package delta.co.nz.service;
 
-import liverton.co.nz.schema.Product;
+import delta.co.nz.schema.Product;
 
 import java.util.List;
 

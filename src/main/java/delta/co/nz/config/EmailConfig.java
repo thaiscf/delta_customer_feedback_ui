@@ -1,4 +1,4 @@
-package liverton.co.nz.config;
+package delta.co.nz.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

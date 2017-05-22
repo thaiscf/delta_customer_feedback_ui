@@ -1,11 +1,11 @@
-package liverton.co.nz.controller;
+package delta.co.nz.controller;
 
 
-import liverton.co.nz.config.EmailConfig;
-import liverton.co.nz.schema.Feedback;
-import liverton.co.nz.service.EmailService;
-import liverton.co.nz.service.FeedbackService;
-import liverton.co.nz.service.ProductService;
+import delta.co.nz.config.EmailConfig;
+import delta.co.nz.schema.Feedback;
+import delta.co.nz.service.FeedbackService;
+import delta.co.nz.service.ProductService;
+import delta.co.nz.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

@@ -1,4 +1,4 @@
-### Liverton Customer Feedback UI
+### Delta Customer Feedback UI
 This repository contains the source code for the Customer Feedback UI
 
 ## Requirements

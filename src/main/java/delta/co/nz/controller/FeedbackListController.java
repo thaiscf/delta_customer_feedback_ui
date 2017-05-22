@@ -1,7 +1,7 @@
-package liverton.co.nz.controller;
+package delta.co.nz.controller;
 
 
-import liverton.co.nz.service.FeedbackService;
+import delta.co.nz.service.FeedbackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

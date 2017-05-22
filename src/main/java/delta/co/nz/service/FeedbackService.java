@@ -1,6 +1,7 @@
-package liverton.co.nz.service;
+package delta.co.nz.service;
 
-import liverton.co.nz.schema.Feedback;
+import delta.co.nz.schema.Feedback;
+
 import java.util.List;
 
 public interface FeedbackService {

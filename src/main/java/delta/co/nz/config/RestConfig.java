@@ -1,4 +1,4 @@
-package liverton.co.nz.config;
+package delta.co.nz.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

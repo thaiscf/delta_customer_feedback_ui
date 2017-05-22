@@ -1,4 +1,4 @@
-package liverton.co.nz.schema;
+package delta.co.nz.schema;
 
 import org.apache.commons.lang3.StringUtils;
 
